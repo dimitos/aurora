@@ -1,0 +1,22 @@
+.title {
+    font-family: $family-title;
+    font-weight: 700;
+}
+
+.title-bg {
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.title-1 {
+    font-size: $text-huge;
+    line-height: 100%;
+    @include pad {
+        font-size: $text-giant;
+    }
+}
+
+.title-2 {
+    font-size: $text-large-medium;
+    line-height: 100%;
+}

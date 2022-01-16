@@ -1,0 +1,54 @@
+.hits2 {
+    background: $color3;
+}
+
+.hits2 .duo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include desktop {
+        flex-direction: row-reverse;
+    }
+}
+
+.hits2 .duo__left {
+    position: relative;
+    display: none;
+    @include pad {
+        display: block;
+        height: 400px;
+    }
+    @include desktop {
+        height: 736px;
+    }
+}
+
+.hits2 .duo__left .image {
+    @include pad {
+        object-position: 50% 17%;
+    }
+    @include desktop {
+        object-position: 64% 50%;
+    }
+}
+
+.hits2 .duo__left .btn {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include desktop {
+        bottom: 55px;
+        left: 105px;
+        transform: none;
+    }
+}
+
+.hits2 .duo__right {
+    max-width: 960px;
+    padding: 50px 5px 40px;
+    margin: 0 auto;
+    @include desktop {
+        padding: 54px 15px 40px;
+    }
+}

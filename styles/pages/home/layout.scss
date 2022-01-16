@@ -1,0 +1,123 @@
+.layout {
+    min-height: 565px;
+    padding: 50px 0 18px;
+    background-image: url(/img/layout-420.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include mobile {
+        background-image: url(/img/layout.jpg);
+    }
+    @include desktop {
+        padding: 55px 0 35px;
+    }
+}
+
+.layout__container {
+    padding: 0 30px;
+    @include pad {
+        padding: 0 20px;
+    }
+}
+
+.layout__wrapper {
+    margin-top: 35px;
+    @include pad {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 53px -15px 0;
+    }
+    @include desktop-large {
+        margin: 53px -44px 0;
+    }
+}
+
+.layout__title {
+    line-height: 125%;
+    color: $color-white;
+    text-align: center;
+    text-shadow: 0px 0px 1px $color-black;
+}
+
+.layout__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout__item {
+    width: 100%;
+    margin-bottom: 32px;
+    @include pad {
+        width: 50%;
+        padding: 0 15px;
+    }
+    @include desktop-large {
+        padding: 0 44px;
+    }
+}
+
+.layout__item-wr {
+    position: relative;
+    height: 100%;
+    padding: 18px 22px 22px;
+    background: $color-white;
+    @include desktop {
+        padding: 15px 22px 17px;
+    }
+}
+
+.layout__item-wr::before {
+    position: absolute;
+    content: '';
+    top: 21px;
+    left: 26px;
+}
+
+.layout__item:nth-child(1) .layout__item-wr::before {
+    width: 56px;
+    height: 52px;
+    background: url(/img/svg/sun.svg) 50% / cover no-repeat;
+}
+
+.layout__item:nth-child(2) .layout__item-wr::before {
+    left: 40px;
+    width: 34px;
+    height: 62px;
+    background: url(/img/svg/temperature.svg) 50% / cover no-repeat;
+}
+
+.layout__item:nth-child(3) .layout__item-wr::before {
+    width: 60px;
+    height: 60px;
+    background: url(/img/svg/place.svg) 50% / cover no-repeat;
+}
+
+.layout__item:nth-child(4) .layout__item-wr::before {
+    width: 51px;
+    height: 49px;
+    background: url(/img/svg/eco.svg) 50% / cover no-repeat;
+}
+
+.layout__item-title {
+    height: 60px;
+    padding-left: 88px;
+    font-size: $text-medium;
+    font-weight: 700;
+    line-height: 130%;
+    color: $color-main-dark;
+    @include desktop {
+        height: auto;
+    }
+}
+
+.layout__item-text {
+    margin-top: 15px;
+    font-size: $text-medium-mini;
+    line-height: 130%;
+    @include desktop {
+        margin-top: 5px;
+        padding-left: 88px;
+        line-height: 120%;
+    }
+}

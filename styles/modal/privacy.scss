@@ -1,0 +1,20 @@
+.privacy {
+    margin: 0;
+    text-align: left;
+}
+.privacy__h {
+    font-size: 15px;
+    text-align: center;
+    @include desktop {
+        font-size: 19px;
+    }
+}
+.privacy__text {
+    & + & {
+        margin-top: 10px;
+    }
+}
+.privacy__list {
+    padding-left: 30px;
+    margin: 10px 0;
+}

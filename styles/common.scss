@@ -1,0 +1,20 @@
+@import './setup/mixins';
+@import './setup/variables';
+
+@import './setup/reset';
+@import './setup/slick';
+@import './setup/helpers';
+@import './setup/swiper-bundle.min';
+
+@import './common/containers';
+@import './common/common';
+@import './common/titles';
+@import './common/links';
+@import './common/buttons';
+@import './common/modal';
+
+@import './blocks/header';
+@import './blocks/footer';
+
+@import './modal/privacy';
+@import './modal/request';

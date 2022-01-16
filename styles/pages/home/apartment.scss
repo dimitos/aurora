@@ -1,0 +1,510 @@
+.apartments {
+    position: relative;
+    padding: 45px 0 35px;
+    background-image: url(/img/apartment-bg-420.png);
+    background-position: 0% 10%;
+    background-repeat: no-repeat;
+    @include mobile {
+        background-image: url(/img/apartment-bg.png);
+    }
+}
+
+// --------- block apartment ----------
+
+.apartment {
+    padding: 35px 0 50px;
+
+    @include desktop {
+        padding: 45px 0 80px;
+    }
+}
+
+
+.apartmen__title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tab-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 50px;
+
+    @include pad {
+        flex-direction: row;
+    }
+}
+
+.tab-btns .btn-default {
+    padding: 20px 37px 18px;
+}
+
+.tab-btn + .tab-btn {
+    margin-top: 25px;
+
+    @include pad {
+        margin-top: 0;
+        margin-left: 40px;
+    }
+}
+
+.apartment-slider .slick-list {
+    height: 100%;
+    margin: 0 -10px;
+    @include desktop {
+        margin: 0 -33px;
+    }
+}
+
+.apartment-slider .slick-track {
+    height: 100%;
+}
+
+.apartment__item {
+    padding: 0 10px;
+    @include desktop {
+        padding: 0 33px;
+    }
+}
+
+.apartment__item-wr {
+    height: 100%;
+    padding: 20px 37px 0;
+    background: $color-white;
+
+    @include desktop {
+        border: 1px solid $color0;
+        padding: 70px 37px 37px;
+    }
+}
+
+.apartment__item-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 284px;
+}
+
+.apartment__item-top picture {
+    width: 100%;
+    height: 100%;
+}
+
+.apartment__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.apartment-slider {
+    position: relative;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.apartment-slider .slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.apartment__item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 37px;
+    text-align: center;
+
+    @include desktop {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.apartment__item-bottom-wr {
+    font-size: $text-medium-mini;
+    line-height: 130%;
+    margin-bottom: 30px;
+
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+
+.apartment__item-price {
+    font-family: $family-title;
+    font-size: $text-medium;
+    font-weight: 700;
+    color: $color-main;
+}
+
+.apartment-slider .btn-slider__prev {
+    position: absolute;
+    left: 30px;
+    top: 76%;
+    transform: translateY(-50%) rotate(180deg);
+
+    @include pad {
+        left: 30px;
+        top: 73%;
+    }
+
+    @include desktop {
+        left: -64px;
+    }
+
+    @include desktop-large {
+        left: -90px;
+    }
+}
+
+.apartment-slider .btn-slider__next {
+    position: absolute;
+    right: 30px;
+    top: 76%;
+    transform: translateY(-50%);
+
+    @include pad {
+        right: 30px;
+        top: 73%;
+    }
+
+    @include desktop {
+        right: -64px;
+    }
+
+    @include desktop-large {
+        right: -90px;
+    }
+}
+
+.apartment-slider .slider-arrows {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include desktop-large {
+        display: block;
+    }
+}
+
+// --------- End block apartment ----------
+
+// --------- subblock floor-orientation ----------
+
+.floor-orientation {
+    margin-bottom: 30px;
+    height: 420px;
+    width: 290px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    @include pad {
+        width: auto;
+    }
+}
+
+.floor-orientation.close {
+    height: 85px;
+    @include pad {
+        height: 360px;
+    }
+}
+
+.floor-orientation__wr {
+    position: relative;
+    margin: 0 auto;
+    height: 346px;
+    width: 222px;
+    transform: translateY(0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    @include pad {
+        margin: 0;
+    }
+}
+
+.floor-orientation.close .floor-orientation__wr {
+    height: 0;
+    transform: translateY(-346px);
+    @include pad {
+        height: 346px;
+        transform: translateY(0);
+    }
+}
+
+.floor-orientation__txt {
+    margin: 20px 0 5px;
+    font-size: $text-tiny;
+    text-align: center;
+}
+
+.floor-orientation__wr::before {
+    position: absolute;
+    content: '';
+    width: 198px;
+    height: 19px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(/img/svg/waves.svg) 50% / cover no-repeat;
+}
+
+.floor-orientation__img {
+    min-height: 273px
+}
+
+.floor-orientation__btn {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 14px;
+    padding-bottom: 20px;
+    cursor: pointer;
+
+    @include pad {
+        display: none;
+    }
+}
+
+.floor-orientation .floor-orientation__btn::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 8px;
+    background: url(/img/svg/icon-close.svg) 50% / cover no-repeat;
+}
+
+.floor-orientation.close .floor-orientation__btn::before {
+    background: url(/img/svg/icon-open.svg) 50% / cover no-repeat;
+}
+
+.floor-orientation__btn-line {
+    display:block;
+    margin-top: 3px;
+    height: 0;
+    border-bottom: 1px solid $color-main;
+}
+
+.floor-orientation__closer-open {
+    display: none;
+    margin-top: 14px;
+    text-align: center;
+    font-size: $text-medium-mini;
+}
+
+.floor-orientation__closer-close {
+    display: block;
+    text-align: center;
+    font-size: $text-medium-mini;
+}
+
+.floor-orientation.close .floor-orientation__closer-open {
+    display: block;
+}
+
+.floor-orientation.close .floor-orientation__closer-close {
+    display: none;
+}
+
+// --------- End subblock floor-orientation ----------
+
+// --------- block floor ----------
+
+.floor__wr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 90px;
+
+    @include pad {
+        flex-direction: row;
+        padding: 35px 0 0;
+    }
+}
+
+.floor__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    text-align: center;
+
+    @include pad {
+        font-size: 50px;
+        text-align: left;
+    }
+}
+
+.floor__right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    padding: 0 0 60px;
+    overflow: hidden;
+
+    @include mobile {
+        height: 475px;
+    }
+
+    @include pad {
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    @include pad {
+        width: 50%;
+        padding: 0 0 40px;
+    }
+
+    @include desktop {
+        width: 45%;
+    }
+
+    @include desktop-large {
+        padding: 0;
+    }
+}
+
+.floor__img {
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.floor__left {
+    margin: 0 auto;
+
+    @include pad {
+        width: 50%;
+    }
+
+    @include desktop {
+        width: 55%;
+    }
+}
+
+.floor__left-wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include pad {
+        align-items: flex-start;
+    }
+}
+
+.floor-list__btn {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include pad {
+        position: static;
+        transform: none;
+        margin: 0;
+        margin-left: 1.5%;
+    }
+}
+
+// __________________________________________
+
+.floor-filter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 -7px 40px;
+
+    @include pad {
+        max-width: 500px;
+    }
+
+    @include desktop {
+        margin: 0 -10px 30px;
+    }
+}
+
+.floor-filter__item {
+    width: calc(100% / 3);
+    padding: 0 7px;
+
+    @include desktop {
+        padding: 0 10px;
+    }
+}
+
+.floor-filter-select {
+    display: block;
+    position: relative;
+    font-family: $family-title;
+    font-weight: 700;
+    font-size: $text-medium-mini;
+    line-height: 127%;
+    color: $color-white;
+    background: $color-main;
+
+    @include desktop {
+        font-size: $text-medium;
+    }
+}
+
+.floor-filter-select::before {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 7px;
+    width: 17px;
+    height: 8px;
+    pointer-events: none;
+    background: url(/img/svg/icon-arrow-down.svg) 50% / cover no-repeat;
+}
+
+.floor-filter__current {
+    padding: 9px 26px 9px 9px;
+    cursor: pointer;
+
+    @include desktop {
+        padding: 7px 30px 7px 15px;
+    }
+}
+
+.floor-filter__current span {
+    pointer-events: none;
+}
+
+.select-option {
+    padding: 9px;
+    cursor: pointer;
+
+    @include desktop {
+        padding: 7px 15px;
+    }
+}
+
+.select-list {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 45px;
+    left: 0;
+    background: $color-main;
+}
+

@@ -1,0 +1,111 @@
+.docs {
+    position: relative;
+    padding: 30px 0;
+    text-align: center;
+    background: $color4;
+}
+
+.docs__container {
+    background: $color-main;
+}
+
+.docs__title {
+    margin-bottom: 30px;
+    color: $color-black;
+}
+
+
+.docs__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    max-width: 550px;
+    margin: 0 auto;
+    @include pad {
+        justify-content: space-around;
+        flex-direction: unset;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.docs__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 115px;
+    padding: 0 0 0 70px;
+    font-weight: 500;
+    color: $color-white;
+    @include pad {
+        justify-content: space-around;
+        width: 32%;
+        height: auto;
+        padding: 15px 0 15px 70px;;
+    }
+    @include desktop {
+        height: 115px;
+        padding: 0 0 0 70px;
+    }
+}
+
+.docs__item:hover {
+    color: $color-room3;
+}
+
+.docs__item::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 75px;
+    background: url(/img/svg/icon-pdf.svg) 50% / cover no-repeat;
+}
+
+.docs__list-more {
+    display: none;
+}
+
+.docs__btn {
+    position: relative;
+    display: inline-block;
+    margin: 20px auto 0;
+    padding: 10px 20px 15px;
+    text-align: center;
+    color: $color-black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.docs__btn::after {
+    position: absolute;
+    content: '';
+    top: 32px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    transform: rotate(45deg) translateX(-50%);
+    transition: all 0.3s ease;
+    transform-origin: 0 50%;
+}
+
+.docs__btn.active::after {
+    top: 37px;
+    transform: rotate(-135deg) translateX(-50%);
+    transform-origin: 0 50%;
+}
+
+.docs__btn:hover {
+    color: $color-main;
+    background: $color-white;
+}
+
+.docs__btn:hover.docs__btn::after {
+    border-color: $color-main;
+}

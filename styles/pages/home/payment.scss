@@ -1,0 +1,152 @@
+.payment {
+    padding: 40px 0 65px;
+    background: $color4;
+    overflow: hidden;
+}
+
+.payment__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 30px;
+    @include desktop {
+        padding: 0 10px;
+    }
+}
+
+.payment__title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.payment__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.payment__item {
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 63px;
+    @include pad {
+        width: 47%;
+    }
+    @include desktop {
+        width: 25%;
+        padding: 0 10px;
+    }
+}
+
+.payment__item-wr {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 275px;
+    margin: 0 auto;
+}
+
+.payment__item-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 0 25px;
+    text-align: center;
+    background: $color-white;
+}
+
+.payment__item-top::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 87px;
+    border-top: 1px solid $color-black;
+}
+
+.payment__item-title {
+    font-size: $text-large-mini;
+}
+
+.payment__item-content {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: $color-white;
+    border-bottom: 3px solid $color-main;
+}
+
+.payment__item-footer {
+    margin: 0 auto;
+    padding: 0 13px;
+}
+
+.payment .btn-default {
+    padding: 20px 19px 18px 28px;
+}
+
+.payment__item-txt {
+    line-height: 130%;
+}
+
+.block-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 10px;
+    @include pad {
+        flex-direction: row;
+        padding: 50px 10px 10px;
+    }
+    @include desktop {
+        padding: 60px 25px 10px;
+    }
+}
+
+.block-link__payment .btn {
+    @include pad {
+        margin-left: 100px;
+    }
+    @include desktop {
+        margin-left: 100px;
+    }
+}
+
+.block-link__logo img {
+    width: 160px;
+}
+
+.block-link__logo {
+    margin-bottom: 30px;
+    @include pad {
+        margin-bottom: 0;
+    }
+}
+
+.block-link::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76%;
+    border-top: 3px solid $color-main;
+    @include pad {
+        width: 610px;
+    }
+    @include desktop {
+        width: 850px;
+        max-width: 800px;
+    }
+}
+
+

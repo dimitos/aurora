@@ -1,0 +1,50 @@
+.hits1 {
+    background: $color1;
+}
+
+.hits1 .duo__left {
+    position: relative;
+    display: none;
+    @include pad {
+        display: block;
+        height: 400px;
+    }
+    @include desktop {
+        height: 775px;
+    }
+}
+
+.hits1 .duo__left .image {
+    @include pad {
+        object-position: 50% 36%;
+    }
+    @include desktop {
+        object-position: 64% 50%;
+    }
+}
+
+.hits1 .hits__title {
+    margin-bottom: 25px;
+}
+
+.hits1 .duo__left .btn {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include desktop {
+        bottom: 55px;
+        right: 105px;
+        left: auto;
+        transform: none;
+    }
+}
+
+.hits1 .duo__right {
+    max-width: 960px;
+    padding: 50px 5px 40px;
+    margin: 0 auto;
+    @include desktop {
+        padding: 85px 15px 40px;
+    }
+}

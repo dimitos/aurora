@@ -1,0 +1,40 @@
+.build {
+    padding: 30px 0;
+    @include desktop {
+        text-align: left;
+    }
+}
+.build__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.build__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: unset;
+        justify-content: space-between;
+    }
+}
+.build__item {
+    height: 330px;
+
+    &+& {
+        margin-top: 15px;
+    }
+    @include desktop {
+        height: 200px;
+    	width: 32%;
+        &+& {
+            margin-top: 0;
+        }
+    }
+    @include desktop-large {
+        height: 260px;
+    }
+}
+.build__iframe {
+    width: 100%;
+    height: 100%;
+}

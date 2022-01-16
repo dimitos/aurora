@@ -1,0 +1,118 @@
+html {
+    min-width: $html-min-width;
+    max-width: $html-max-width;
+    color: $color-black;
+    background-color: $color-white;
+    font-family: $family-text;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+::placeholder {
+    color: $color0;
+}
+
+::selection {
+    background: $color-main;
+    text-shadow: none;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.scroll-top {
+    position: absolute;
+    left: 0;
+    top: -120px;
+    @include desktop {
+        top: -160px;
+    }
+    @include desktop-large {
+        top: -200px;
+    }
+}
+
+.duo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include pad {
+        flex-direction: row;
+    }
+}
+
+.duo__item {
+    width: 100%;
+    @include pad {
+        width: 50%;
+    }
+}
+
+.hits .duo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.hits .duo__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include desktop {
+        width: 50%;
+    }
+}
+
+.color-main {
+    color: $color-main;
+}
+
+.hits__title-2 {
+    text-align: center;
+    max-width: 360px;
+    margin: 0 auto 40px;
+    @include desktop {
+        margin: 0 auto;
+    }
+}
+
+.hits__title {
+    padding: 0 50px;
+    text-align: center;
+}
+
+.block-flat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+}
+
+.image {
+    image-rendering: crisp-edges; // safari
+    image-rendering: -moz-crisp-edges; // fire fox
+    image-rendering: -webkit-optimize-contrast; // chrom
+    -ms-interpolation-mode: nearest-neighbor; // IE
+}
+
+.image.cover {
+    height: 100%;
+    width: 100%;
+}
+
+.contain {
+	object-fit: contain;
+}
+
+.cover {
+	object-fit: cover;
+}
+
+.fill {
+	object-fit: fill;
+}

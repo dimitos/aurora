@@ -1,0 +1,26 @@
+.container-small {
+    padding: 0 15px;
+    @include desktop {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop {
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: $container-desktop-small;
+    }
+}
+
+.container-large {
+    padding: 0 15px;
+    @include desktop {
+        width: $container-desktop-small;
+        padding: 0 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop-large {
+        width: $container-desktop-large;
+    }
+}

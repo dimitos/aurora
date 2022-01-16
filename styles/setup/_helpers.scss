@@ -1,0 +1,11 @@
+.d-mobile-none {
+    @include to-desktop {
+        display: none;
+    }
+}
+
+.d-desktop-none {
+    @include desktop {
+        display: none;
+    }
+}

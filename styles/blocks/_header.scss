@@ -1,0 +1,240 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    padding: 15px 0;
+    background: $color-white;
+    box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.2);
+    @include desktop {
+        padding: 22px 0;
+    }
+}
+
+.header__logo img {
+    width: 110px;
+    height: 30px;
+
+    @include desktop {
+        width: 162px;
+        height: 44px;
+    }
+}
+
+.header__wr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 35px;
+    @include desktop {
+        display: block;
+        padding: 0;
+    }
+}
+
+.header__contacts-phone {
+    display: block;
+    position: relative;
+    padding: 0 0 0 26px;
+    margin-top: 30px;
+    font-size: $text-medium-small;
+    @include desktop {
+        margin: 0;
+        font-size: $text-small;
+    }
+    @include desktop-large {
+        font-size: $text-medium-small;
+    }
+}
+
+.header__contacts-phone::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background: url(/img/svg/phone.svg) center / cover no-repeat;
+}
+
+.header__contacts-phone:hover {
+    color: $color-main;
+}
+
+.header__callback {
+    display: inline-block;
+    margin-top: 20px;
+    color: $color-main;
+    border-bottom: 1px solid $color-main;
+    @include desktop {
+        margin: 0;
+        font-size: $text-tiny;
+    }
+    @include desktop-large {
+        font-size: initial;
+    }
+}
+
+.header__callback:hover {
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: -800px;
+    width: 100%;
+    max-width: 768px;
+    background: $color3;
+    user-select: none;
+    transition: all 0.6s ease;
+    @include desktop {
+        position: inherit;
+        width: auto;
+        max-width: none;
+        height: auto;
+        background: none;
+    }
+}
+
+.menu__content-wr{
+    position: relative;
+    padding: 140px 40px 80px;
+    @include desktop {
+        position: initial;
+        padding: 0;
+    }
+}
+
+.menu__list {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu__list-left,
+.menu__list-right {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+    }
+}
+
+.menu__content-wr .menu__list-center {
+    position: absolute;
+    height: 44px;
+    //width: 162px;
+    padding: 0;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include desktop {
+        position: initial;
+        height: auto;
+        width: auto;
+        padding: 0 65px;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+
+.menu__item {
+    font-size: $text-medium;
+    margin-bottom: 20px;
+    @include desktop {
+        font-size: $text-tiny;
+        margin-bottom: 0;
+    }
+    @include desktop-large {
+        font-size: $text-medium-mini;
+    }
+
+    &-unfinished {
+        display: none;
+
+        @include desktop {
+            display: block;
+            visibility: hidden;
+        }
+    }
+}
+
+.menu__item:hover {
+    color: $color-main;
+}
+
+.mobile__callback{
+    position: relative;
+    width: 33px;
+    height: 18px;
+    @include desktop {
+        display: none;
+    }
+}
+
+.mobile__callback::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background: url(/img/svg/phone.svg) 50% / cover no-repeat;
+}
+
+.menu__closer {
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    right: 22px;
+    width: 40px;
+    height: 40px;
+    font-size: 55px;
+    color: $color-main;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    @include desktop {
+        display: none;
+    }
+}
+
+.mobile-menu__line {
+    margin-top: 35px;
+    border-bottom: 2px solid $color-main;
+}
+
+.mobile-center{
+    @include desktop {
+        display: none;
+    }
+}
+
+.menu__btn-line{
+    width: 33px;
+    height: 4px;
+    background: $color-main;
+    border-radius: 2px;
+    & + & {
+        margin-top: 6px;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+
+
+
+

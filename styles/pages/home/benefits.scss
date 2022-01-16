@@ -1,0 +1,96 @@
+.benefits {
+    background-color: $color-white;
+    overflow: hidden;
+    font-size: 1vw;
+}
+
+.benefits .duo__item-img {
+    height: 237px;
+    @include pad {
+        height: 514px;
+    }
+}
+
+.benefits__txt {
+    font-size: $text-medium-small;
+    line-height: 130%;
+    & + & {
+        margin-top: 25px;
+    }
+    @include pad {
+        font-size: $text-small;
+    }
+    @include desktop {
+        font-size: 1.15em;
+    }
+}
+
+.duo__item-txt {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
+    min-height: 572px;
+    @include pad {
+        min-height: auto;
+    }
+    @include desktop {
+        padding: 10px 75px 60px 100px;
+    }
+}
+
+.benefits .duo:last-child .duo__item-txt {
+    @include desktop {
+        padding: 60px 75px 60px 50px;
+    }
+}
+
+.benefits__title-bg {
+    bottom: -2px;
+    right: 0;
+    z-index: 0;
+    color: $color2;
+    font-size: 72px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    @include pad {
+        font-size: 65px;
+    }
+    @include desktop {
+        font-size: 5.9em;
+        line-height: 75%;
+        transform: none;
+        writing-mode: initial;
+    }
+}
+
+.benefits .duo {
+    overflow: hidden;
+}
+
+.benefits .duo:first-child .benefits__title-bg {
+    @include desktop {
+        bottom: 0;
+        right: auto;
+        left: 0;
+    }
+}
+
+.benefits .duo:last-child .benefits__title-bg {
+    @include desktop {
+        top: -2px;
+        left: -5px;
+        bottom: auto;
+        right: auto;
+    }
+}
+
+.benefits__wr {
+    position: relative;
+}
+
+.benefits .duo:last-child {
+    @include pad {
+        flex-direction: row-reverse;
+    }
+}
